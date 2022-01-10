@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+	"strings"
+)
 
 func main() {
-	fmt.Println("hello day02!")
+	var who string
+	who = "Hello "
+	if len(os.Args) > 1 {
+		args := os.Args[1:]
+		fmt.Printf("the type is %T:\n", args)
+		who += strings.Join(os.Args[1:], " ")
+	}
+	fmt.Println(who)
+
 }
