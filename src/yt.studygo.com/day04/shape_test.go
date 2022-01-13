@@ -51,18 +51,26 @@ func TestArea(t *testing.T) {
 
 	// 重构2 列表驱动测试
 	areaTests := []struct {
-		shape Shape
-		want  float64
+		name    string
+		shape   Shape
+		hasarea float64
 	}{
-		{RectAngle{10.0, 20.0}, 200.0},
-		{Circle{10.0}, 314.0},
-		{TriAngle{5.0, 10.0}, 25.0},
+		{name: "RectAngle", shape: RectAngle{10.0, 20.0}, hasarea: 200.0},
+		{name: "Circle", shape: Circle{10.0}, hasarea: 314.0},
+		{name: "TriAngle", shape: TriAngle{5.0, 10.0}, hasarea: 25.0},
 	}
 	for _, tt := range areaTests {
-		got := tt.shape.Area()
-		want := tt.want
-		if want != got {
-			t.Errorf("got %f want %f", got, want)
-		}
+		t.Run(tt.name, func(t *testing.T) {
+			got := tt.shape.Area()
+			want := tt.hasarea
+			if got != want {
+				t.Errorf("%#v got %f want %f", tt.shape, got, want)
+			}
+		})
+		/* 		got := tt.shape.Area()
+		   		want := tt.want
+		   		if want != got {
+		   			t.Errorf("got %f want %f", got, want)
+		   		} */
 	}
 }
