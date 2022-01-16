@@ -1,11 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
-
-func main() {
+/* func main() {
 	c1 := make(chan string, 1)
 	go func() {
 		time.Sleep(time.Second * 2)
@@ -18,4 +13,4 @@ func main() {
 	case <-time.After(time.Second * 1):
 		fmt.Println("time out 1")
 	}
-}
+} */
