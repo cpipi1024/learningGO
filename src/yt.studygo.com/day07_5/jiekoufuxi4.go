@@ -14,7 +14,7 @@ type terminalwrite struct{}
 type filewrite struct{}
 
 func (tw terminalwrite) write() {
-
+	fmt.Println("正在向终端写日志")
 	//return false
 }
 
@@ -29,8 +29,10 @@ func main() {
 	//input = 2 往文件写日志
 	switch input {
 	case 1:
+		writer = terminalwrite{}
 		writer.write()
 	case 2:
+		writer = filewrite{}
 		writer.write()
 	}
 }
