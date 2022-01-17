@@ -14,7 +14,8 @@ func TypeAndKind(a interface{}) {
 	v := reflect.TypeOf(a)
 	fmt.Printf("type:%v   kind:%v\n", v.Name(), v.Kind())
 }
-func main() {
+
+/* func main() {
 	var a *float32
 	var b Myint
 	var c rune
@@ -40,4 +41,4 @@ func main() {
 
 	TypeAndKind(p) // 类型是定义的person类型 底层数据类型是struct
 	TypeAndKind(book)
-}
+} */

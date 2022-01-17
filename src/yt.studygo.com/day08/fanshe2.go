@@ -16,10 +16,10 @@ func reflectValue(a interface{}) {
 	}
 }
 
-func main() {
+/* func main() {
 	var a int64 = 10
 	var b float32 = 3.1415
 
 	reflectValue(a)
 	reflectValue(b)
-}
+} */
