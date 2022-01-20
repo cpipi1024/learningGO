@@ -42,29 +42,29 @@ func printMethod(a interface{}) {
 	}
 }
 
-func main() {
-	s1 := Student{
-		Name:  "yangtao",
-		Age:   24,
-		Score: 99,
-	}
-
-	t := reflect.TypeOf(s1) // 返回类型对象
-
-	fmt.Printf("type: %v kin: %v\n", t.Name(), t.Kind())
-
-	// 通过索引获取指定的结构字段信息
-	/* 	for i := 0; i < t.NumField(); i++ {
-		field := t.Field(i)
-		fmt.Printf("name:%s index: %d type: %v json tag: %v\n", field.Name, field.Index, field.Type, field.Tag.Get("json"))
-	} */
-
-	// 通过字段名获取指定结构体字段信息
-	/* 	if socrefield, ok := t.FieldByName("Score"); ok {
-		fmt.Printf("name: %s index: %d type: %v json tag: %v\n", socrefield.Name, socrefield.Index, socrefield.Type, socrefield.Tag.Get("json"))
-	} */
-
-	// printMethod
-	printMethod(s1)
-
+/* func main() {
+s1 := Student{
+	Name:  "yangtao",
+	Age:   24,
+	Score: 99,
 }
+
+t := reflect.TypeOf(s1) // 返回类型对象
+
+fmt.Printf("type: %v kin: %v\n", t.Name(), t.Kind()) */
+
+// 通过索引获取指定的结构字段信息
+/* 	for i := 0; i < t.NumField(); i++ {
+	field := t.Field(i)
+	fmt.Printf("name:%s index: %d type: %v json tag: %v\n", field.Name, field.Index, field.Type, field.Tag.Get("json"))
+} */
+
+// 通过字段名获取指定结构体字段信息
+/* 	if socrefield, ok := t.FieldByName("Score"); ok {
+	fmt.Printf("name: %s index: %d type: %v json tag: %v\n", socrefield.Name, socrefield.Index, socrefield.Type, socrefield.Tag.Get("json"))
+} */
+
+// printMethod
+/* 	printMethod(s1)
+
+} */
