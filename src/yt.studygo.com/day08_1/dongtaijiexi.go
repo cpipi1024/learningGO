@@ -77,7 +77,7 @@ func main() {
 	file, _ := os.Open("peizhi.ini")
 	m = readFile(file)
 	var s = Person{}
-	reflecValue(s, m)
+	reflecValue(&s, m)
 	fmt.Println(s)
 
 }
