@@ -1,5 +1,4 @@
 pkg/
 bin/
 *.ini
-.log
-.git
+*.log

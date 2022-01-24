@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"os"
 	"time"
@@ -48,7 +47,7 @@ func (f *FileLogger) loging() {
 
 }
 
-func main() {
+/* func main() {
 	fl := FileLogger{
 		filename: "file.log",
 	}
@@ -58,3 +57,4 @@ func main() {
 	time.Sleep(time.Second * 5)
 	fmt.Println("main go 结束")
 }
+*/
