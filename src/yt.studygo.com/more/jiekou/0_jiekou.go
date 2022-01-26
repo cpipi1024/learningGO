@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type byteCounter int
 
 func (c *byteCounter) Write(b []byte) (int, error) {
@@ -9,15 +7,15 @@ func (c *byteCounter) Write(b []byte) (int, error) {
 	return len(b), nil
 }
 
-func main() {
+/* func main() {
 	var c byteCounter
 	c.Write([]byte("hello"))
-	fmt.Println(c)
+	//fmt.Println(c)
 
 	c = 0
 
 	var name = "dolly"
 
-	fmt.Fprintf(&c, "hello, %s", name)
-	fmt.Println(c)
-}
+	fmt.Fprintf(os.Stdout, "hello, %s\n", name)
+	//fmt.Println(c)
+} */
