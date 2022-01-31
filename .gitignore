@@ -3,3 +3,5 @@ bin/
 *.ini
 *.log
 *.txt
+test/
+go.mod
