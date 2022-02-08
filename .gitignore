@@ -5,3 +5,6 @@ bin/
 *.txt
 test/
 go.mod
+*.html
+*.css
+*.js
