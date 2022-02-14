@@ -30,9 +30,10 @@ func NewHtmlParser(html string) *htmlParser {
 	return &htmlParser{html, 0}
 }
 
-func main() {
+/* func main() {
 	//htmlmap := make(map[string]string, 1)
 	//htmlmap["h1"] = "hello, world"
 	html := "<h1>hello, world</h1>"
 	NewHtmlParser(html)
 }
+*/
